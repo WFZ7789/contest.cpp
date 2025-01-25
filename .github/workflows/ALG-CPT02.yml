@@ -16,6 +16,6 @@ jobs:
     - name: compile
       run: g++ -std=c++14 -O2 ALG-CPT02/r0.cpp -o main
     - name: geninput
-      run: echo 16384 > data.in
+      run: cmd /C echo 16384 > data.in
     - name: run
       run: ./main < data.in
