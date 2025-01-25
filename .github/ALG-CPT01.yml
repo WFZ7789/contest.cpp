@@ -1,0 +1,19 @@
+name: ALG-CPT01
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: windows-2022
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: compile
+      run: g++ -std=c++14 -O2 ALG-CPT01/r0.cpp -o main
+    - name: run
+      run: ./main
