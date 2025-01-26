@@ -18,4 +18,4 @@ jobs:
     - name: geninput
       run: cmd /C echo 16384 > data.in
     - name: run
-      run: cmd /C ./main < data.in
+      run: cmd /C './main < data.in'
